@@ -1,23 +1,41 @@
 const PLAYER = document.querySelector('h2')
 
-//playerOne is a boolean so that if true, the innertext will be either X or O
-let playerOne = true
-playerOne === true ? 'X' : 'O'
-
-document.querySelector('td').addEventListener('click', playerOne())
+//playerOneTurn is a boolean so that if true, the innertext will be either X or O
+let playerOneTurn = true
 
 function playerOne() {
+  playerOneTurn = true
   PLAYER.innerHTML = "Player One's Turn"
   PLAYER.style.color = 'red'
-  playerOne = true
-  playerTwo()
 }
 
 function playerTwo() {
+  playerOneTurn = false
   PLAYER.innerHTML = "Player Two's Turn"
   PLAYER.style.color = 'blue'
-  playerOne = false
-  playerOne()
 }
 //TODO: add values to tds in html and then create an array of 'winning' combinations to check against
 function checkWinner() {}
+
+// allSquares.value = null
+
+//iterate over squares
+
+let allSquares = document.querySelectorAll('td div')
+
+allSquares.forEach((square) => {
+  square.addEventListener('click', () => {
+    if (playerOneTurn === true) {
+      square.innerHTML = 'X'
+      playerTwo()
+    } else {
+      square.innerHTML = 'O'
+      playerOne()
+    }
+    //   playerOneTurn === false
+    //     ? ((e.innerHTML = 'O'), playerTwo(), console.log(playerOneTurn))
+    //     : ((e.innerHTML = 'X'), playerOne(), console.log(playerOneTurn))
+  })
+})
+
+//conditional to be used to check if the value of td is null or not.

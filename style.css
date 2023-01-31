@@ -437,6 +437,8 @@ td div {
   min-height: 100px;
   min-width: 100px;
   place-items: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 *, ::before, ::after {
@@ -533,14 +535,6 @@ td div {
   --tw-backdrop-sepia:  ;
 }
 
-.mt-\[50\%\] {
-  margin-top: 50%;
-}
-
-.mt-\[25\%\] {
-  margin-top: 25%;
-}
-
 .mt-\[15\%\] {
   margin-top: 15%;
 }
@@ -551,10 +545,6 @@ td div {
 
 .table {
   display: table;
-}
-
-.flex-row {
-  flex-direction: row;
 }
 
 .flex-col {

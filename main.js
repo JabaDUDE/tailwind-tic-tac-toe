@@ -1,3 +1,4 @@
+//TODO: Change 'X' and 'O' to images
 //status display for current player
 const STATUS_DISPLAY = document.querySelector('h2')
 const BUTTON = document.querySelector('button')
